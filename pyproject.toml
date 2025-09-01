@@ -1,0 +1,23 @@
+[project]
+name = "codecompass-engine"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "bit2swaz",email = "bit2swaz@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi (>=0.116.1,<0.117.0)",
+    "uvicorn[standard] (>=0.35.0,<0.36.0)",
+    "tree-sitter (>=0.25.1,<0.26.0)",
+    "pydantic (>=2.11.7,<3.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "codecompass_engine", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
