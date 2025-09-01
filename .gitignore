@@ -1,2 +1,31 @@
+# IDE and editor files
+.vscode/
+.idea/
+
+# Python virtual environment
+.venv/
+*.pyc
+/src/codecompass_engine/__pycache__/
+
+# Poetry
+poetry.lock
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Compiled tree-sitter library
+*.so
+*.dll
+
+# Dotenv environment file
 .env
-src/codecompass_engine/__pycache__
+
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
