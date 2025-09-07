@@ -181,7 +181,6 @@ description = "Backport of PEP 654 (exception groups)"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
-markers = "python_version == \"3.10\""
 files = [
     {file = "exceptiongroup-1.3.0-py3-none-any.whl", hash = "sha256:4d111e6e0c13d0644cad6ddaa7ed0261a0b36971f6d23e7ec9b4b9097da78a10"},
     {file = "exceptiongroup-1.3.0.tar.gz", hash = "sha256:b241f5885f560bc56a59ee63ca4c6a8bfa46ae4ad651af316d4e81817bb9fd88"},
@@ -248,14 +247,8 @@ files = [
 [package.dependencies]
 google-auth = ">=2.14.1,<3.0.0"
 googleapis-common-protos = ">=1.56.2,<2.0.0"
-grpcio = [
-    {version = ">=1.49.1,<2.0.0", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
-    {version = ">=1.33.2,<2.0.0", optional = true, markers = "python_version < \"3.11\" and extra == \"grpc\""},
-]
-grpcio-status = [
-    {version = ">=1.49.1,<2.0.0", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
-    {version = ">=1.33.2,<2.0.0", optional = true, markers = "extra == \"grpc\""},
-]
+grpcio = {version = ">=1.33.2,<2.0.0", optional = true, markers = "extra == \"grpc\""}
+grpcio-status = {version = ">=1.33.2,<2.0.0", optional = true, markers = "extra == \"grpc\""}
 proto-plus = ">=1.22.3,<2.0.0"
 protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<7.0.0"
 requests = ">=2.18.0,<3.0.0"
@@ -1391,5 +1384,5 @@ files = [
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.10, <3.12"
-content-hash = "80ef8a87d30ded64629b9bd0bd3ba4dcc068fd82c3ea5950e9fb69b33cae91fa"
+python-versions = ">=3.10, <3.11"
+content-hash = "86b7c7e208437c26aca61b25e4e1ae4ec8c2a22cb239fccfebbf43fffdb202b5"
