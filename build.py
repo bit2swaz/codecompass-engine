@@ -1,23 +1,16 @@
-# build.py (Temporary Diagnostic Script)
-import os
-import sys
+from tree_sitter import Language
 
-print("--- STARTING CODECOMPASS DIAGNOSTIC SCRIPT ---")
+# This is the correct way to call the build_library method
+Language.build_library(
+  # Store the library in the `build` directory
+  'build/my-languages.so',
 
-# Command 1: Print the current working directory to know where we are.
-print("\n--- [1] CURRENT WORKING DIRECTORY ---")
-os.system("pwd")
+  # List the paths to the parser repos
+  [
+    'vendor/tree-sitter-python',
+    'vendor/tree-sitter-javascript',
+    # Add paths to other languages here in the future
+  ]
+)
 
-# Command 2: List all files and folders with details to see everything.
-print("\n--- [2] LISTING ALL FILES & FOLDERS ---")
-os.system("ls -laR")
-
-# Command 3: Find the top 30 largest files and directories.
-# This will tell us what's taking up all the space.
-print("\n--- [3] FINDING TOP 30 LARGEST ITEMS ---")
-os.system("du -ah . | sort -rh | head -n 30")
-
-print("\n--- DIAGNOSTIC SCRIPT COMPLETE ---")
-
-# Intentionally fail the build so we can see the logs clearly.
-sys.exit(1)
+print("Tree-sitter language library built successfully!")
