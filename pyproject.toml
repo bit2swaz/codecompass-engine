@@ -19,6 +19,9 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "codecompass_engine", from = "src"}]
 
+[tool.poetry.scripts]
+diagnose = "scripts.diagnose:main"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
