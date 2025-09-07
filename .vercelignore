@@ -1,0 +1,11 @@
+# Ignore the tree-sitter source code, it's not needed at runtime
+
+vendor/
+
+# Ignore local development artifacts
+
+.venv/
+**pycache**/
+\*.pyc
+.pytest_cache/
+.coverage
